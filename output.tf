@@ -1,5 +1,5 @@
 output "VPC_ID" {
-value = aws_vpc.myvpc.id
+  value = aws_vpc.myvpc.id
 }
 
 output "PublicSub_ID" {
