@@ -15,7 +15,7 @@ variable "region" {
 }
 
 variable "bucket1" {
-  default = "testingterra"
+  default = "testingterra656565656565"
 }
 
 variable "bucket2" {
