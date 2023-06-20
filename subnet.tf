@@ -3,7 +3,7 @@ resource "aws_subnet" "PublicSunebt1" {
   cidr_block                                  = var.subnet1cidr
   enable_resource_name_dns_a_record_on_launch = "true"
   map_public_ip_on_launch                     = "true"
-  count                                       = "3"
+  #count                                       = "3"
 
   tags = {
     Name = "PublicSunebt1"
@@ -20,4 +20,7 @@ resource "aws_subnet" "PrivateSunebt1" {
     Name = "PrivateSunebt1"
   }
 }
+
+
+
 

@@ -13,12 +13,13 @@ resource "aws_lb_target_group" "nlbrg" {
 
   name     = "terraformlb-tg"
   port     = 80
-  protocal = "TCP"
+  protocol = "TCP"
   vpc_id   = aws_vpc.myvpc.id
 }
 
 resource "aws_lb_target_group_attachment" "tg-attach" {
   target_group_arn = aws_lb_target_group.nlbrg.arn
+  target_id = "aws_instav"
   port             = 80
 }
 

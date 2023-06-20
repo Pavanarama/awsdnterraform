@@ -3,7 +3,7 @@ output "VPC_ID" {
 }
 
 output "PublicSub_ID" {
-  value = aws_subnet.PublicSunebt1.id
+  value = aws_subnet.PublicSunebt1[count.index].id
 }
 
 output "PrivateSub_ID" {
