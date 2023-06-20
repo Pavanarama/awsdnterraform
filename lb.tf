@@ -19,7 +19,7 @@ resource "aws_lb_target_group" "nlbrg" {
 
 resource "aws_lb_target_group_attachment" "tg-attach" {
   target_group_arn = aws_lb_target_group.nlbrg.arn
-  target_id = "aws_instav"
+  target_id = "aws_instance.myec2.id"
   port             = 80
 }
 
