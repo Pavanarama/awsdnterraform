@@ -1,0 +1,6 @@
+vpccidr     = "10.2.0.0/16"
+subnet1cidr = "10.2.1.0/24"
+subnet2cidr = "10.2.2.0/24"
+region      = "us-east-1"
+bucket1     = "testingterra65656565656565"
+bucket2     = "testingterra1212"
