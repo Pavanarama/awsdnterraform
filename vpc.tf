@@ -28,23 +28,24 @@ resource "aws_route_table" "public-route" {
   }
 }
 
-resource "aws_route_table" "private-route" {
+/* resource "aws_route_table" "private-route" {
   vpc_id = aws_vpc.myvpc.id
 
   tags = {
     Name = "Private_route"
   }
-}
+} */
 
 resource "aws_route_table_association" "public-rta" {
-  subnet_id      = aws_subnet.PublicSunebt1.id
+  count          = 3
+  subnet_id      = element(aws_subnet.PublicSunebts.*.id, count.index)
   route_table_id = aws_route_table.public-route.id
 }
 
-resource "aws_route_table_association" "private-rta" {
+/* resource "aws_route_table_association" "private-rta" {
   subnet_id      = aws_subnet.PrivateSunebt1.id
   route_table_id = aws_route_table.private-route.id
-}
+} */
 
 
 resource "aws_security_group" "mysg" {
@@ -66,5 +67,6 @@ resource "aws_security_group" "mysg" {
   }
 
 }
+
 
 
